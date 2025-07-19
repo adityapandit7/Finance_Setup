@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+      body,
+      html {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f4f4f4;
+      }
+      .container {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        background: white;
+      }
+      .left,
+      .right {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 40px;
+      }
+      .left {
+        background: #2ca58d;
+        color: white;
+      }
+      .left h2 {
+        margin-bottom: 10px;
+        font-size: 32px;
+        font-weight: bold;
+      }
+      .left p {
+        margin-bottom: 20px;
+      }
+      .left .signup-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+      }
+      .left p.signup-text {
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+      .left button {
+        background: white;
+        color: #2ca58d;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .right h2 {
+        color: #2ca58d;
+        margin-bottom: 20px;
+        font-size: 28px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      .input-field {
+        width: 80%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .submit-btn {
+        background: #2ca58d;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <h2>Welcome Back!</h2>
+        <p>
+          We hope to provide the best mutual fund recommendations based on your
+          desires!
+        </p>
+        <div class="signup-container">
+          <p class="signup-text">Don't have an account?</p>
+          <button id="signup-btn">Sign Up</button> <!-- Fixed button with ID -->
+        </div>
+      </div>
+      <div class="right">
+        <h2>Login</h2>
+        <input type="email" class="input-field" placeholder="Email" />
+        <input type="password" class="input-field" placeholder="Password" />
+        <button class="submit-btn">Login</button>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("signup-btn").addEventListener("click", function () {
+        window.location.href = "signup.html";
+      });
+    </script>
+  </body>
+</html>
